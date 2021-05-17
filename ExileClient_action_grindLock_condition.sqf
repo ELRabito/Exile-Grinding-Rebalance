@@ -14,7 +14,7 @@
 private["_door", "_result", "_grinderUID", "_requiredamount", "_Wbntg", "_Mbntg", "_Cbntg", "_fppgo"];
 _door = _this;
 _result = "";
-_requiredamount = "";
+_requiredamount = 0;
 _Wbntg = getArray(missionConfigFile >> "CfgGrinding" >> "GrindWoodTypes");
 _Mbntg = getArray(missionConfigFile >> "CfgGrinding" >> "GrindMetalTypes");
 _Cbntg = getArray(missionConfigFile >> "CfgGrinding" >> "GrindConcreteypes");
@@ -59,6 +59,7 @@ try
 	{
 		_requiredamount = getNumber(missionConfigFile >> "CfgGrinding" >> "BatteryAmountRequiredConcrete");
 	};
+	if(_requiredamount == 0) then {throw "You can't grind this!";};
 	_numberOfBatteries = {"Exile_Magazine_Battery" == _x} count (magazines player);
 	if(_numberOfBatteries < _requiredamount) then
 	{
