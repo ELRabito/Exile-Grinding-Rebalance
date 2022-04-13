@@ -14,3 +14,6 @@ Grinding Rebalance by AeoG - El'Rabito.
 - Amount of batteries needed for each element type (Wood,Metal,Concrete).
 - Enable/disable grinding in first person (People use it for glitch viewing through walls).
 -> If disabled It switches camera view to external (third person) so you can't glitch view through the element.
+
+
+# License Info: If you server is named KFB (Kentucky Fried Bambi) you have no permission to use this. Any violation will result in a DMCA.
